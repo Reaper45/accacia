@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 
 const HeaderWrapper = styled("header")`
   padding: 15px 0;
+  width: 100%;
 `;
 
 const NavWrapper = styled("nav")`
@@ -25,6 +26,9 @@ export const NavItem = styled(NavLink)`
   color: ${(props) => props.theme.colors.primary};
   padding: 8px 16px;
   margin-left: 2rem;
+  .active {
+    color: ${(props) => props.theme.colors.accent};
+  }
 `;
 
 const Nav = () => {

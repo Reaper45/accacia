@@ -1,18 +1,12 @@
 import styled from "@emotion/styled";
-import React from 'react'
+import React from "react";
 
-import { Container, Footer, Nav } from "../components";
+import { Container, Footer, Nav, MainImgWrapper } from "../components";
 
 import mainBg from "../static/main.png";
 import cuisineBg from "../static/cuisine.png";
 import experienceBg from "../static/experience.png";
-
-const LandingWrapper = styled("div")`
-  background: #000 url(${mainBg}) no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-`;
+import BookingForm from "../components/BookingForm";
 
 const SectionWrapper = styled("section")`
   margin: 5rem 0;
@@ -36,7 +30,6 @@ const SectionContent = styled("div")`
   p {
     color: ${(props) => props.theme.colors.secondary};
     line-height: 1.5;
-
   }
 `;
 
@@ -53,9 +46,14 @@ const SectionAction = styled("button")`
 const HomePage = () => {
   return (
     <>
-      <LandingWrapper>
+      <MainImgWrapper img={mainBg}>
         <Nav />
-      </LandingWrapper>
+        <Container>
+          <h1>COZY<br /> RELAXATION</h1>
+          <br/>
+          <BookingForm />
+        </Container>
+      </MainImgWrapper>
       <Container>
         <SectionWrapper>
           <img src={experienceBg} alt="" />
@@ -87,17 +85,34 @@ const HomePage = () => {
           <img src={cuisineBg} alt="" />
         </SectionWrapper>
         <SectionWrapper>
-          <h2>Find Us</h2>
+          <div>
+            <h2>Find Us</h2>
+          </div>
         </SectionWrapper>
 
         <SectionWrapper>
-          <h2>Follow us on Instagram</h2>
-          <a href="#">@ACACIARESIDENCY</a>
+          <div style={{ width: "100%" }}>
+            <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>
+              Follow us on Instagram
+            </h2>
+            <a
+              href="/"
+              style={{
+                textAlign: "center",
+                display: "block",
+                color: "#999999",
+                textDecoration: "none",
+                letterSpacing: "1.5px",
+              }}
+            >
+              @ACACIARESIDENCY
+            </a>
+          </div>
         </SectionWrapper>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
-}
+};
 
-export default HomePage
+export default HomePage;
