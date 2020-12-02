@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { NavLink } from "react-router-dom";
 
 import logo from "../static/logo.png";
-import { NavLink } from "react-router-dom";
 
 const HeaderWrapper = styled("header")`
   padding: 15px 0;
@@ -35,7 +35,9 @@ const Nav = () => {
   return (
     <HeaderWrapper>
       <NavWrapper>
-        <img className="logo" src={logo} alt="Acacia logo" />
+        <NavLink to="/">
+          <img className="logo" src={logo} alt="Acacia logo" />
+        </NavLink>
         <div>
           <NavItem to="/about-us">About Us</NavItem>
           <NavItem to="/services">Our services &amp; activities</NavItem>

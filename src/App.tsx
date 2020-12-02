@@ -6,9 +6,10 @@ import ContactsPage from "./pages/contacts";
 import HomePage from "./pages/home";
 
 function App() {
+  // console.log("fff")
   return (
     <Switch>
-      <Route path="/" component={HomePage} exact />
+      <Route path="/" component={HomePage} exact/>
       <Route path="/about-us" component={AboutPage} />
       <Route path="/contact-us" component={ContactsPage} />
     </Switch>
