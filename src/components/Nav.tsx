@@ -26,7 +26,7 @@ export const NavItem = styled(NavLink)`
   color: ${(props) => props.theme.colors.primary};
   padding: 8px 16px;
   margin-left: 2rem;
-  .active {
+  &.active {
     color: ${(props) => props.theme.colors.accent};
   }
 `;

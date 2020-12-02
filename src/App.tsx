@@ -8,9 +8,9 @@ import HomePage from "./pages/home";
 function App() {
   return (
     <Switch>
-      <Route path="/" component={HomePage} />
-      <Route path="/about" component={AboutPage} exact />
-      <Route path="/contacts" component={ContactsPage} exact />
+      <Route path="/" component={HomePage} exact />
+      <Route path="/about-us" component={AboutPage} />
+      <Route path="/contact-us" component={ContactsPage} />
     </Switch>
   );
 }

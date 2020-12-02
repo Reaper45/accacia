@@ -1,13 +1,14 @@
 import React from "react";
 
-import { Container, Footer, MainImgWrapper, Nav } from "../components";
+import { Container } from "../components";
+import Layout from "../components/Layout";
 import mainBg from "../static/main.png";
 
 const ContactsPage = () => {
   return (
-    <>
-      <MainImgWrapper img={mainBg}>
-        <Nav />
+    <Layout
+      image={mainBg}
+      top={() => (
         <Container>
           <h1>Contact Us</h1>
           <div className="description">
@@ -17,10 +18,8 @@ const ContactsPage = () => {
             732 123 333
           </div>
         </Container>
-      </MainImgWrapper>
-
-      <Footer />
-    </>
+      )}
+    />
   );
 };
 

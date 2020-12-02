@@ -1,13 +1,14 @@
 import React from "react";
 
-import { Container, Footer, MainImgWrapper, Nav } from "../components";
+import { Container } from "../components";
+import Layout from "../components/Layout";
 import mainBg from "../static/main.png";
 
 const AboutPage = () => {
   return (
-    <>
-      <MainImgWrapper img={mainBg}>
-        <Nav />
+    <Layout
+      image={mainBg}
+      top={() => (
         <Container>
           <h1>ABOUT THE ACACIA RESIDENCY</h1>
           <div className="description">
@@ -17,10 +18,8 @@ const AboutPage = () => {
             tourism.{" "}
           </div>
         </Container>
-      </MainImgWrapper>
-
-      <Footer />
-    </>
+      )}
+    />
   );
 };
 
