@@ -1,12 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import { ThemeProvider } from "@emotion/react";
+
+import { theme } from "./theme";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import "./index.css";
+
+const history = createBrowserHistory();
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={history}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );

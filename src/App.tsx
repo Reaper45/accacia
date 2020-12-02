@@ -1,12 +1,17 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+import AboutPage from "./pages/about";
+import ContactsPage from "./pages/contacts";
+import HomePage from "./pages/home";
 
 function App() {
   return (
-    <div className="App">
-      <h2>
-        Accacia Residence
-      </h2>
-    </div>
+    <Switch>
+      <Route path="/" component={HomePage} />
+      <Route path="/about" component={AboutPage} exact />
+      <Route path="/contacts" component={ContactsPage} exact />
+    </Switch>
   );
 }
 
