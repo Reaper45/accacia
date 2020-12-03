@@ -12,7 +12,7 @@ import useModal from "../hooks/useModal";
 import BookingForm from "../components/booking/BookingForm";
 
 
-const SectionWrapper = styled("section")`
+export const SectionWrapper = styled("section")`
   margin: 5rem 0;
   display: flex;
   align-items: flex-start;
@@ -23,7 +23,7 @@ const SectionWrapper = styled("section")`
   }
 `;
 
-const SectionContent = styled("div")`
+export const SectionContent = styled("div")`
   width: 50%;
   h2 {
     font-size: 2rem;
