@@ -1,14 +1,15 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-import { Container, Modal } from "../components";
-import { BookingForm, BookingPreview } from "../components/booking";
+import { Container } from "../components";
+import Booking from "../components/booking";
 import Layout from "../components/Layout";
 
 import mainBg from "../static/main.png";
 import cuisineBg from "../static/cuisine.png";
 import experienceBg from "../static/experience.png";
 import useModal from "../hooks/useModal";
+import BookingForm from "../components/booking/BookingForm";
 
 
 const SectionWrapper = styled("section")`
@@ -124,11 +125,8 @@ const HomePage = () => {
           </Container>
         )}
       </Layout>
-      {isOpen && (
-        <Modal close={close} show>
-          <BookingPreview />
-        </Modal>
-      )}
+      {isOpen && <Booking close={close}/>}
+      
     </>
   );
 };

@@ -52,7 +52,7 @@ const ModalWrapper = styled("div")<Partial<IModalProps>>`
 
 const ModalContent = styled("div")`
   border-radius: 5px;
-  padding: 2em 0 1rem;
+  padding: 1.5em 0;
   width: 100%;
   box-sizing: border-box;
   position: relative;
