@@ -26,7 +26,7 @@ const BookingFormWrapper = styled("div")`
 
 const FormField = styled("div")`
   padding: 0 1rem;
-  border-right: solid 1px #bfcbbf;
+  border-right: solid 1px ${(props) => props.theme.colors.primary};
 
   :first-of-type {
     margin-left: 1rem;
@@ -46,7 +46,9 @@ const FormField = styled("div")`
   }
 `;
 
-const BookingForm = () => {
+const BookingForm: React.FC<{
+  handleClick: () => void;
+}> = ({ handleClick }) => {
   return (
     <BookingFormWrapper>
       <FormField>
@@ -65,9 +67,9 @@ const BookingForm = () => {
         <label htmlFor="">Guests</label>
         <input />
       </FormField>
-      <button>Book Online</button>
+      <button onClick={handleClick}>Book Online</button>
     </BookingFormWrapper>
   );
-}
+};
 
 export default BookingForm

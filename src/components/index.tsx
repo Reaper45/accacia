@@ -18,7 +18,7 @@ export const MainImgWrapper = styled("div")<{ img: string }>`
   justify-content: space-between;
   h1 {
     color: ${(props) => props.theme.colors.light};
-    font-size: 6rem;
+    font-size: 4.75rem;
     font-weight: 300;
     margin-bottom: 2rem;
   }
@@ -26,6 +26,6 @@ export const MainImgWrapper = styled("div")<{ img: string }>`
   padding-bottom: 2rem;
 `;
 
-
 export { default as Footer } from "./Footer";
 export { default as Nav } from "./Nav";
+export { default as Modal } from "./Modal";
